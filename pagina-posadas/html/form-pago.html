@@ -7,7 +7,7 @@
     <title>Formulario de Pago</title>
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f4/Flag_map_of_Misiones.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="stylesheet" href="../css/formulario.css">
 </head>
 <body onload="noMostrarElementos()">
     <div class="contenedor">
@@ -42,7 +42,7 @@
                                     <select name="plan" id="opcionPlan">
                                         <option disabled selected>Plan</option>
                                     </select>
-                                    <img src="/multimedia/angle-down-solid.svg" alt="">
+                                    <img src="../multimedia/angle-down-solid.svg" alt="">
                                 </div>
                             </div>
                             <div id="metodoPago">
@@ -58,7 +58,7 @@
                                     <select name="abono" id="lugarAbono">
                                         <option disabled selected>Lugar a abonar</option>
                                     </select>
-                                    <img src="/multimedia/angle-down-solid.svg" alt="">
+                                    <img src="../multimedia/angle-down-solid.svg" alt="">
 
                                 <div class="btn-pago">
                                     <input type="button" value="Confirmar Pago" id="botonPago" onclick="aceptar1()">
@@ -74,7 +74,7 @@
                 <div class="delantera">
                     <div class="logo-marca" id="logo-marca">
                     </div>
-                    <img src="/multimedia/chip-icono.png " class="chip" alt="icono del chip">
+                    <img src="../multimedia/chip-icono.png " class="chip" alt="icono del chip">
                     <div class="datos">
                         <div class="grupo" id="numero">
                             <p class="label">Numero Tarjeta</p>
@@ -114,7 +114,7 @@
             <!-- Boton del Formulario -->
             <div class="contenedor-btn">
                 <button class="btn-abrir-formulario" id="btn-abrir-formulario">
-                    <img src="/multimedia/plus-solid.svg" alt="">
+                    <img src="../multimedia/plus-solid.svg" alt="">
                 </button>
             </div>
             <!-- Formulario Tarjeta-->
@@ -135,13 +135,13 @@
                                 <select name="mes" id="selectMes">
                                     <option disabled selected>Mes</option>
                                 </select>
-                                <img src="/multimedia/angle-down-solid.svg" alt="">
+                                <img src="../multimedia/angle-down-solid.svg" alt="">
                             </div>
                             <div class="grupo-select">
                                 <select name="year" id="selectYear">
                                     <option disabled selected>Año</option>
                                 </select>
-                                <img src="/multimedia/angle-down-solid.svg" alt="">
+                                <img src="../multimedia/angle-down-solid.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -156,10 +156,8 @@
             </form>
         </div>
         </div>
-        <script  defer src="/js/form.js"></script>
-        <script src="/js/sweetAlert.js"></script>
+        <script  defer src="../js/form.js"></script>
+        <script src="../js/sweetAlert.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
 </body>
 </html>
