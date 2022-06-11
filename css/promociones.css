@@ -1,0 +1,64 @@
+/* Listado De Precios  */
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.texto-catalogo{
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    margin: auto 0;
+    margin-top: 80px;
+}
+.card{
+    background:#fff;
+    width: 370px;
+    height: 440px;
+    margin: 40px;
+    border-radius:15px;
+    color:#af34da;
+}
+.card-title{
+    background: var(--button-main-color);
+    color: var(--main-text-color);
+    width: 320px;
+    margin: 20px auto;
+    border-radius: 15px;
+    text-align: center;
+}
+.card-image{
+    height: 300px;
+    margin: 15px;
+    background-size: cover;
+}
+.card:hover{
+    transform: scale(1.2);
+    background: var(--cont-article-main-color);
+    color:var(--main-text-color);
+    transition: .4s;
+    cursor: pointer;
+}
+.card .btn-about{
+    margin: 0 110px;
+}
+.btn-about:hover{
+    transform: scale(1.2);
+    background-color: var(--button-main-color);
+    border: 2px solid var(--cont-container-buttom-color);
+    color:var(--main-text-color);
+    transition: .4s;
+    cursor: pointer;
+}
+.card1{
+    background-image: url(/multimedia/beautiful-student-girl-learning-at-home-with-laptop.jpg);
+}
+.card2{
+    background-image: url(/multimedia/little-girl-and-her-father-using-laptop-together-at-home.jpg);
+}
+.card3{
+    background-image: url(/multimedia/young-woman-sits-on-red-sofa-while-working-at-laptop.jpg);
+}

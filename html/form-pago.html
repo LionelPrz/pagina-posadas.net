@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f4/Flag_map_of_Misiones.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="stylesheet" href="/css/formulario-responsive.css">
+</head>
+<body onload="noMostrarElementos()">
+    <div class="contenedor">
+        <div class="izquierda">
+                    <!-- Formulario de Contacto -->
+                    <form action="" id="formulario-contacto" class="formulario-contacto">
+                        <h2 form-title>Formulario de cobro</h2>
+                        <p form-text>Por favor ingrese sus datos para poder abonar el plan</p>
+                        <div class="grupo">
+                            <label for="inputNombre">Nombre</label>
+                            <input type="text" id="inputNombre" maxlenght="15" autocomplete="off">
+                            
+                            <label for="inputApellido">Apellido</label>
+                            <input type="text" id="inputApellido" maxlength="15" autocomplete="off">
+                            
+                            <label for="inputCorreo">Correo Electronico</label>
+                            <input type="email" id="inputCorreo" maxlength="64" autocomplete="off">
+                            
+                            <label for="inputTelefono">Numero de Telefono</label>
+                            <input type="text" id="inputTelefono" maxlength="12" autocomplete="off">
+
+                            <div id="planContrato">
+                                <label for="inputPago">Tipo de Plan a Contratar</label>
+                            <div class="flexbox">
+                                <input type="button" value="Plan Promocional" id="planPromocional">
+                                <input type="button" value="Personalizado" id="planPersonalizado">
+                            </div>
+                            </div>
+                            <div id="selectPlan">
+                                <label for="inputPlan">Selecione el plan a contratar</label>
+                                <div class="grupo-select">
+                                    <select name="plan" id="opcionPlan">
+                                        <option disabled selected>Plan</option>
+                                    </select>
+                                    <img src="/multimedia/angle-down-solid.svg" alt="">
+                                </div>
+                            </div>
+                            <div id="metodoPago">
+                                <label for="inputPago">Metodo de Pago</label>
+                            <div class="flexbox">
+                                <input type="button" value="Pago en Efectivo" id="pagoEfectivo">
+                                <input type="button" value="Pago con Tarjeta" id="pagoTarjeta">
+                            </div>
+                            </div>
+                                <div id="sitioCobro">
+                                    <label for="lugarAbono">Seleccione lugar en donde realizar el pago</label>
+                                <div class="grupo-select">
+                                    <select name="abono" id="lugarAbono">
+                                        <option disabled selected>Lugar a abonar</option>
+                                    </select>
+                                    <img src="/multimedia/angle-down-solid.svg" alt="">
+
+                                <div class="btn-pago">
+                                    <input type="button" value="Confirmar Pago" id="botonPago" onclick="aceptar1()">
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+        </div>
+          <!-- Tarjeta de Credito -->
+        <div class="derecha" id="derecha" >
+            <section class="tarjeta" id="tarjeta">
+                <div class="delantera">
+                    <div class="logo-marca" id="logo-marca">
+                    </div>
+                    <img src="/multimedia/chip-icono.png " class="chip" alt="icono del chip">
+                    <div class="datos">
+                        <div class="grupo" id="numero">
+                            <p class="label">Numero Tarjeta</p>
+                            <p class="numero">#### #### #### ####</p>
+                        </div>
+                        <div class="flexbox">
+                            <div class="grupo" id="nombre">
+                                <p class="label">Nombre Tarjeta</p>
+                                <p class="nombre">Jhon Doe</p>
+                            </div>
+    
+                            <div class="grupo" id="expiracion">
+                                <p class="label">Vencimiento</p>
+                                <p class="nombre"><span class="mes">MM</span>/<span class="year">AA</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="trasera">
+                    <div class="barra-magnetica"></div>
+                    <div class="datos">
+                        <div class="grupo" id="firma">
+                            <p class="label">Firma</p>
+                            <div class="firma"><p></p></div>
+                        </div>
+                        <div class="grupo" id="CCV">
+                            <p class="label">CCV</p>
+                            <p class="CCV"></p>
+                        </div>
+                    </div>
+                    <p class="leyenda">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat nobis cum illo quibusdam quo, tempore, perferendis earum repellat ex nam nesciunt quisquam! Fugit quibusdam esse saepe sequi praesentium eos quisquam.</p>
+                        <a href="#" class="link-banco">www.tubanco.com</a>
+                    </div>
+            </section>
+            <!-- Boton del Formulario -->
+            <div class="contenedor-btn">
+                <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+                    <img src="/multimedia/plus-solid.svg" alt="">
+                </button>
+            </div>
+            <!-- Formulario Tarjeta-->
+            <form action=""id="formulario-tarjeta" class="formulario-tarjeta">
+                <div class="grupo">
+                    <label for="inputNumero">Numero Tarjeta</label>
+                    <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+                </div>
+                <div class="grupo">
+                    <label for="inputNombre">Nombre </label>
+                    <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+                </div>
+                <div class="flexbox">
+                    <div class="grupo expira">
+                        <label for="selectMes">Expiracion</label>
+                        <div class="flexbox">
+                            <div class="grupo-select">
+                                <select name="mes" id="selectMes">
+                                    <option disabled selected>Mes</option>
+                                </select>
+                                <img src="/multimedia/angle-down-solid.svg" alt="">
+                            </div>
+                            <div class="grupo-select">
+                                <select name="year" id="selectYear">
+                                    <option disabled selected>Año</option>
+                                </select>
+                                <img src="/multimedia/angle-down-solid.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grupo ccv">
+                        <label for="inputCCV">CCV</label>
+                        <input type="text" id="inputCCV" maxlength="3">
+                    </div>
+                </div>
+                    <div>
+                        <input type="button" value="Confirmar Pago" onclick="aceptar1()" class="btn-enviar">
+                    </div>
+            </form>
+        </div>
+        </div>
+        <script  defer src="/js/form.js"></script>
+        <script src="/js/sweetAlert.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+</html>

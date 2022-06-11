@@ -1,0 +1,72 @@
+/* About us */
+.vertical-padding{
+    padding-bottom: 0px;
+}
+.about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .content img {
+    padding: 15px;
+    margin: auto 0;
+    height: 500px;
+    width: 500px;
+}
+.text{
+    width: 550px;
+    padding: 0 10px;
+    text-align: center;
+}
+.content{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.text h1{
+    color: var(--main-text-color);
+    font-size: 85px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.text h5{
+   color: var(--main-text-color);
+   font-size: 25px;
+   margin-bottom: 25px;
+   text-transform: capitalize;
+   letter-spacing: 2px;
+}
+.text p{
+    color:var(--secundary-text-color);
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+.btn-about{
+    background-color: var(--button-main-color);
+    color: #fff;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 0 auto;
+    margin-top: 65px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.btn-about:hover{
+    transform: scale(1.2);
+    background: transparent;
+    border: 2px solid var(--cont-container-buttom-color);
+    color:var(--main-text-color);
+    transition: .4s;
+    cursor: pointer;
+}

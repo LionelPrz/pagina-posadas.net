@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"
+    />
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f4/Flag_map_of_Misiones.png" type="image/x-icon">
+    <title>Posadas.NET</title>
+    <!-- Importacion de las hojas de estilos -->
+   <link rel="stylesheet"  href="/css/about-us.css">
+   <link rel="stylesheet" href="/css/contador.css">
+   <link rel="stylesheet" href="/css/footer.css">
+   <link rel="stylesheet" href="/css/header.css">
+   <link rel="stylesheet" href="/css/main.css">
+   <link rel="stylesheet" href="/css/normalize.css">
+   <link rel="stylesheet" href="/css/promociones.css">
+   <link rel="stylesheet" href="/css/responsive.css">
+    <!-- Importacion de Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <!-- Cabecero -->
+    <header class="header">
+      <nav class="nav" id="header">
+        <a href="#header" class="logo nav-link">
+          <!-- Lugar en donde poner el logo del header -->
+        </a>
+        <button id="cerrar" class="nav-toggle" aria-label="Abrir menú" >
+          <img src="../multimedia/list.svg" alt="">
+        </button>
+        <ul id="abrir" class="nav-menu">
+          <li class="nav-menu-item">
+            <a href="#about-us" class="nav-menu-link nav-link">Sobre Nosotros</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#contador" class="nav-menu-link nav-link nav-menu-link_active">Tu Plan Ideal</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#paquetes" class="nav-menu-link nav-link">Planes</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#footer" class="nav-menu-link nav-link ">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Sobre Nosotros -->
+      <section class="about" id="about-us">
+        <div class="content">
+          <!-- <img src="/multimedia/paja.png"> -->
+          <div class="text">
+            <h1>Posadas.Net</h1>
+            <h5>Sobre Nosotros</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet quo nesciunt sit eos exercitationem vitae, quos voluptas tempore qui, possimus beatae delectus! Impedit placeat tempora delectus obcaecati ipsum voluptatem eveniet?sadkjhaslkjd</p>
+            </p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo quisquam sed illum doloribus eos tempora rem laborum omnis esse nesciunt. Deserunt sapiente, laudantium non eveniet delectus incidunt magnam ut magni.</p>
+            <a href="#paquetes">
+              <button class="btn-about">Conoce nuestras promociones</button>
+            </a>
+          </div>
+        </div>
+      </section>
+        <!-- Catalogo de Precios  -->
+          <h2 class="texto-catalogo" id="paquetes"> Promociones</h2>
+          <div class="card-container">
+            <div class="card">
+              <h2 class="card-title">Pack Estudiantil</h2>
+              <div class="card-image card1"></div>
+              <a href="/html/form-pago.html" class="card-a" target="_blank">
+                <button class="btn-about">Contratar</button></a>
+            </div>
+            <div class="card">
+              <h2 class="card-title">Pack Familiar</h2>
+              <div class="card-image card2"></div>
+              <a href="/html/form-pago.html" class="card-a" target="_blank">
+                <button class="btn-about">Contratar</button>
+              </a>
+            </div>
+            <div class="card">
+              <h2 class="card-title">Pack Empresarial</h2>
+              <div class="card-image card3"></div>
+              <a href="/html/form-pago.html"class="card-a" target="_blank">
+                <button class="btn-about">Contratar</button>
+              </a>
+            </div>
+          </div>
+    <!-- Contenido Principal  / Contador-->
+    <div class="horizontal-padding vertical-padding" Id="contador">
+      <div class="master-container-contador ">
+        <div class="texto-contador"><h2>Seleccione Su Plan Ideal </h2></div>
+        <div class="container-contador">
+          <div class="valores2">
+            <h2 id="valor2">$ 2115</h2></div>
+          <div class="valores">
+            <h2 id="valor">1 MB/PS</h2></div>
+          <div class="botones">
+            <button class="boton aumentar"><img src="../multimedia/keyboard_double_arrow_up_black_24dp.svg" alt=""></button>
+            <button id="reset"class="boton resetear"><img src="../multimedia/cached_black_24dp.svg" alt=""></button>
+            <button class="boton disminuir"><img src="../multimedia/keyboard_double_arrow_down_black_24dp.svg" alt=""></button>
+          </div>
+        </div>
+        <div class="boton-contratar">
+          <button onclick="aceptar()">ACEPTAR</button>
+          <a href="/html/form-pago.html"></a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <!-- Pie de Pagina -->
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+          <div class="footer-content-container">
+            <!-- Lugar en donde se pone el logo del footer -->
+            <span class="footer-info">3794 870925</span>
+            <span class="footer-info">Posadasnett@gmail.com</span>
+          </div>
+          <div class="footer-menus">
+            <div class="footer-content-container">
+              <span class="menu-title">Menu</span>
+              <a href="#" class="menu-item-footer">Home</a>
+              <a href="#" class="menu-item-footer">Contact</a>
+              <a href="#" class="menu-item-footer">Testimonials</a>
+            </div>
+            <div class="footer-content-container">
+              <span class="menu-title">Legal</span>
+              <a href="#" class="menu-item-footer">Privacy Policy</a>
+              <a href="#" class="menu-item-footer">Cookies</a>
+              <a href="#" class="menu-item-footer">Terms & Conditions</a>
+            </div>
+          </div>
+          <div class="footer-content-container">
+            <span class="menu-title">Contactenos</span>
+            <div class="social-container">
+                <a href="#" class="social-link"></a>
+                <a href="#" class="social-link"></a>
+                <a href="#" class="social-link"></a>
+            </div>
+          </div>
+        </div>
+      <div class="copyright-container footer">
+        <span class="copyright">&copy;2022 Todos Los Derechos Reservados©</span>
+      </div>
+    </footer>
+    <script src="/js/sweetAlert.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/app.js"></script>
+
+  </body>
+</html>
