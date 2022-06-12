@@ -25,13 +25,13 @@ function aceptar(){
     icon: 'question',
     html:
     '¿Quiere ser redireccionado a la seccion de pagos?',
-    showCloseButton: true,
+    showCloseButton: false,
     showCancelButton: true,
     focusConfirm: false,
     confirmButtonText:
-      '<a href="/html/form-pago.html" target="_blanck"><b>Great!</b></a>',
+      '<a href="/html/form-pago.html" target="_blanck"><b>Confirmar</b></a>',
     cancelButtonText:
-      '<b>Not Great!</b>',
+      '<b>Cancelar</b>',
   })
     reseteo();
   }
