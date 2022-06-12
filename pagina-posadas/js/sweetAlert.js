@@ -36,6 +36,7 @@ function aceptar(){
     reseteo();
   }
   function aceptar1(){
+    
     Swal.fire({
       icon:'success',
       text:'Has contratado tu plan con exito',
