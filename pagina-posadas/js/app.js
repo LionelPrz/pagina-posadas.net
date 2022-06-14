@@ -1,11 +1,11 @@
 // Barra de navegacion Responsive
 
-
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const footer = document.getElementById('footer');
 const menuLinks = document.querySelectorAll('.nav-menu a[href^=\"#\"]');
 //Funcion para resolver el problema del nav con el footer
+
     function agregadoFooter(){
         footer.style.display = "block";
 }
@@ -13,6 +13,7 @@ const menuLinks = document.querySelectorAll('.nav-menu a[href^=\"#\"]');
         footer.style.display = "none";
 }
 
+//Generacion de menu de hamburguesa
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav-menu_visible");
 

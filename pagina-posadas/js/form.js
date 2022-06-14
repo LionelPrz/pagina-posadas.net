@@ -64,7 +64,7 @@ const tarjeta = document.querySelector('#tarjeta'),
     //Desplegar Planes promocionales cuando se use el boton
       planPromo.addEventListener('click',()=>{
         planFormulario.style.display="block";
-            let promo = ["Promocion 1" ,"Promocion 2", "Promocion 3"];
+            let promo = ["Plan Estudiantil" ,"Plan Familiar", "Plan Empresarial"];
             for(let i = 0;i<promo.length;i++){
             let Promo = document.createElement('option');
                 Promo.value = promo[i];

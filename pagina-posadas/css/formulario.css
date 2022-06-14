@@ -36,13 +36,13 @@ body{
     padding: 20px 15px 30px 25px;
     border-radius: 10px;
 }
-.formulario-contacto p{
+.formulario-contacto .form-text{
     text-align: center;
     padding: 10px;
     margin: 10px;
     font-size: 16px;
 }
-.formulario-contacto h2{
+.formulario-contacto .form-title{
     text-align: center;
     padding: 10px;
     margin: 10px;
@@ -83,12 +83,13 @@ body{
     font-size: 16px;
     opacity: 0;
 }
-.formulario-contacto__input-error{
+.formulario__input-error{
     font-size: 12px;
     margin-bottom: 0px;
     display: none;
 }
-.formulario-contacto__input-error-activo{
+.formulario__input-error-activo {
+    padding: 5px;
     font-size: 12px;
     margin-bottom: 0px;
     display: block;
@@ -102,10 +103,14 @@ body{
     border-radius: 3px;
     display: none;
 }
+.formulario-contacto__mensaje-activo{
+    display: block;
+}
 .formulario-contacto__mensaje p{
     margin: 0px;
     padding: 0px;
 }
+
 
 .formulario-contacto .flexbox{
     display: flex;
