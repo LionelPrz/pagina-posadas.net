@@ -459,6 +459,7 @@ body{
     
     .contenedor{
         padding:50px 0px;
+        padding: 10px 15px 10px 25px;
     }
     .formulario-contacto h2{
         font-size: 28px;
@@ -491,7 +492,10 @@ body{
         width: 300px;
     }
     .formulario-tarjeta .formulario-contacto__mensaje-activo{
-        font-size: 13px;
+        font-size: 12px;
+    }
+    .formulario-contacto__mensaje-activo{
+        font-size: 12px;
     }
     .formulario-tarjeta .grupo-input .formulario__validacion-estado {
         right: -310px;
