@@ -46,6 +46,8 @@ function aceptar(){
     setInterval("location.reload()",2000);
   }
 
+
+  //Creacion de las funcionalidades de los botones del contador
   botones.forEach(boton => {
   boton.addEventListener('click', function(e) {
 

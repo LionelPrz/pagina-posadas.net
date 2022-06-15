@@ -144,14 +144,21 @@
             </div>
             <!-- Formulario Tarjeta-->
             <form action=""id="formulario-tarjeta" class="formulario-tarjeta">
-                <div class="grupo">
-                    <label for="inputNumero">Numero Tarjeta</label>
-                    <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+
+                <div class="grupo grupo-input" id="grupo__tarjetaCredito">
+                    <label class="formulario__label" for="inputNumero">Numero Tarjeta</label>
+                    <input class="formulario__input" type="text" name="tarjetaCredito" id="inputNumero" maxlength="19" autocomplete="off">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i> 
+                    <p class="formulario__input-error">Por favor ingrese solo numeros en el formato correcto</p>
                 </div>
-                <div class="grupo">
-                    <label for="inputNombre">Nombre </label>
-                    <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+
+                <div class="grupo grupo-input" id="grupo__propietarioTarjeta">
+                    <label class="formulario__label" for="inputNombre">Nombre</label>
+                    <input class="formulario__input" type="text" name="propietarioTarjeta" id="inputNombre" maxlength="19" autocomplete="off">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i> 
+                    <p class="formulario__input-error">Por favor no ingrese caracteres numericos o especiales</p>
                 </div>
+
                 <div class="flexbox">
                     <div class="grupo expira">
                         <label for="selectMes">Expiracion</label>
@@ -176,7 +183,7 @@
                     </div>
                 </div>
 
-                <div class="formulario-contacto__mensaje" id="formulario__mensaje">
+                <div class="formulario-contacto__mensaje" id="formulario__mensaje-tarjeta">
                     <p><i class="fa-solid fa-triangle-exclamation"></i><b>Error:</b>Por favor rellene el formulario correctamente</p>
                 </div>
                         <button type="submit" class="btn-enviar">Confirmar Pago</button>

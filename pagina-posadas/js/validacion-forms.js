@@ -1,6 +1,8 @@
     //Validacion del formulario de cobro y de la tarjeta 
 const formularioContacto = document.getElementById('formulario-contacto');
+const formularioTarjeta = document.getElementById('formulario-tarjeta');
 const inputs = document.querySelectorAll('#grupo input');
+const inputs2 = document.querySelectorAll('#formulario-tarjeta input');
 
     //Generacion de las expresiones regulares
     const expresiones = {
@@ -9,7 +11,9 @@ const inputs = document.querySelectorAll('#grupo input');
 	    apellido: /^[a-zA-ZÀ-ÿ\s]{1,20}$/,
         password: /^.{4,12}$/, // 4 a 12 digitos.
 	    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+	    telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+        tarjetaCredito: /^(?:\d{15,16}|\d{4}(?:(?:\s+\d{4}){3}|\s+\d{6}\s\d{5}))$/,
+        propietarioTarjeta: /^[a-zA-ZÀ-ÿ\s]{1,20}$/
 }
 
     //Generacion de los valores de los campos
@@ -17,13 +21,15 @@ const inputs = document.querySelectorAll('#grupo input');
         nombre: false,
         apellido: false,
         email: false,
-        telefono: false
+        telefono: false,
+        tarjetaCredito: false,
+        propietarioTarjeta: false,
     }
-
 
     //Creacion de funcion para validar Campos
     const validarCampo = (expresion,input,campo)=>{
         if(expresion.test(input.value)){
+            //Validacion correcta de los grupos de imputs formulario contacto
             document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
             document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
             document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-xmark');
@@ -33,6 +39,7 @@ const inputs = document.querySelectorAll('#grupo input');
             //Validacion correcta del formulario
             campos[campo] = true;
         }else{
+            //Validacion incorrecta de los grupos de imputs formulario contacto
             document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
             document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
             document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-xmark');
@@ -59,18 +66,28 @@ const inputs = document.querySelectorAll('#grupo input');
             case "telefono":
                 validarCampo(expresiones.telefono,e.target,'telefono');
             break;
+            case "tarjetaCredito":
+                validarCampo(expresiones.tarjetaCredito,e.target,'tarjetaCredito');
+            break;
+            case "propietarioTarjeta":
+                validarCampo(expresiones.propietarioTarjeta,e.target,'propietarioTarjeta');
         }
     }
 
 
-    //Generacion de la comprobacion de completado del formulario
+    //Generacion de la comprobacion de completado del formulario de contacto
     inputs.forEach((input)=>{
+        input.addEventListener('keyup',validarFormulario);
+        input.addEventListener('blur',validarFormulario);
+    })
+    //Generacion de la comprobacion de completado del formulario de contacto
+    inputs2.forEach((input)=>{
         input.addEventListener('keyup',validarFormulario);
         input.addEventListener('blur',validarFormulario);
     })
 
 
-    //Generacion de la comprobacion de los campos del formulario
+    //Generacion de la comprobacion de los campos del formulario de contacto
     formularioContacto.addEventListener('submit', (e)=>{
         e.preventDefault();
 
@@ -88,6 +105,29 @@ const inputs = document.querySelectorAll('#grupo input');
             })
         }else{
             document.getElementById('formulario__mensaje').classList.add('formulario-contacto__mensaje-activo');
+        }
+    });
+
+    //Generacion de la comprobacion de los campos del formulario de tarjeta
+
+    formularioTarjeta.addEventListener('submit', (e)=>{
+        e.preventDefault();
+
+        if(campos.nombre && campos.apellido && campos.email && campos.telefono && campos.propietarioTarjeta && campos.tarjetaCredito){
+            Swal.fire({
+                icon:'success',
+                text:'Has contratado tu plan con exito',
+                showConfirmButton: false,
+                timer: 2000
+              })
+              formularioTarjeta.reset();
+
+            //Limpieza de los iconos del formulario
+            document.querySelectorAll('.formulario__grupo-correcto').forEach((icono)=>{
+                icono.classList.remove('formulario__grupo-correcto');
+            })
+        }else{
+             document.getElementById('formulario__mensaje-tarjeta').classList.add('formulario-contacto__mensaje-activo');
         }
     });
 
@@ -120,20 +160,18 @@ const inputs = document.querySelectorAll('#grupo input');
         lugarAbono.appendChild(opcion);
     }
 
-    // Validacion del numero de tarjeta
+  //  Validacion del numero de tarjeta
     formulario.inputNumero.addEventListener('keyup',(e)=>{
         let valorInput = e.target.value;
 
         formulario.inputNumero.value = valorInput
 
-    //Eliminacion de espacios en blanco
-    .replace(/\s/g,'')
-    //Eliminacion de las letras
-    .replace(/\D/g,'')
-    //Espaciado cada 4 numeros
-    .replace(/([0-9]{4})/g,'$1 ')
-    //Eliminacion del ultimo espaciado
-    .trim();
+    // //Eliminacion de espacios en blanco
+    // .replace(/\s/g,'')
+    // //Espaciado cada 4 numeros
+    // .replace(/([0-9]{4})/g,'$1 ')
+    // //Eliminacion del ultimo espaciado
+    // .trim();
 
     // Agregado de datos a la tarjeta
     numeroTarjeta.textContent = valorInput;

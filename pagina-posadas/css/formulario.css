@@ -110,8 +110,6 @@ body{
     margin: 0px;
     padding: 0px;
 }
-
-
 .formulario-contacto .flexbox{
     display: flex;
     justify-content: space-around;
@@ -391,9 +389,24 @@ body{
     box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
 }
 .formulario-tarjeta input{
-    margin-bottom: 20px;
+    margin: 0;
     text-transform: uppercase;
 }
+
+.formulario-tarjeta .grupo-input .formulario__validacion-estado{
+    position: relative;
+    right: -505px;
+    bottom: 35px;
+    font-size: 20px;
+}
+
+.formulario-tarjeta .formulario__input-error-activo {
+    position: relative;
+    bottom: 16px;
+    padding: 5px;
+    font-size: 12px
+}
+
 .formulario-tarjeta .flexbox{
     display: flex;
     justify-content: space-between;
@@ -470,8 +483,21 @@ body{
         margin-top: 15px;
         font-size: 18px;
     }
+    .formulario__input-error-activo{
+        position: relative;
+        bottom: 16px;
+    }
     .formulario-contacto .grupo-input .formulario__input{
         width: 300px;
+    }
+    .formulario-tarjeta .formulario-contacto__mensaje-activo{
+        font-size: 13px;
+    }
+    .formulario-tarjeta .grupo-input .formulario__validacion-estado {
+        right: -310px;
+        bottom: 34px;
+        font-size: 18px;
+
     }
     .tarjeta{
         right: -58px;
@@ -492,6 +518,9 @@ body{
         width: 400px;
         top: -155px;
         right: -48px
+    }
+    .trasera .datos #firma .firma p{
+        font-size: 28px;
     }
     .contenedor-btn .btn-abrir-formulario{
         left: 235px;

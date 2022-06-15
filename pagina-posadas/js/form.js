@@ -109,3 +109,5 @@ const tarjeta = document.querySelector('#tarjeta'),
         btnAbrirFormulario.classList.toggle('active');
             formulario.classList.toggle('active');
     });
+
+    
