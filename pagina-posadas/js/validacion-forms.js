@@ -35,17 +35,19 @@ const inputs2 = document.querySelectorAll('#formulario-tarjeta input');
             document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-xmark');
             document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-check');
             document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+
             
             //Validacion correcta del formulario
             campos[campo] = true;
-        }else{
+        }
+        else{
             //Validacion incorrecta de los grupos de imputs formulario contacto
             document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
             document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
             document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-xmark');
             document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-check');
             document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
-        
+
             //Validacion incorrecta del formulario
             campos[campo] = false;
         }
@@ -71,19 +73,20 @@ const inputs2 = document.querySelectorAll('#formulario-tarjeta input');
             break;
             case "propietarioTarjeta":
                 validarCampo(expresiones.propietarioTarjeta,e.target,'propietarioTarjeta');
-        }
+            break;
     }
+}
 
 
     //Generacion de la comprobacion de completado del formulario de contacto
     inputs.forEach((input)=>{
         input.addEventListener('keyup',validarFormulario);
-        input.addEventListener('blur',validarFormulario);
+        // input.addEventListener('blur',validarFormulario);
     })
     //Generacion de la comprobacion de completado del formulario de contacto
     inputs2.forEach((input)=>{
         input.addEventListener('keyup',validarFormulario);
-        input.addEventListener('blur',validarFormulario);
+        // input.addEventListener('blur',validarFormulario);
     })
 
 
@@ -166,12 +169,12 @@ const inputs2 = document.querySelectorAll('#formulario-tarjeta input');
 
         formulario.inputNumero.value = valorInput
 
-    // //Eliminacion de espacios en blanco
-    // .replace(/\s/g,'')
-    // //Espaciado cada 4 numeros
-    // .replace(/([0-9]{4})/g,'$1 ')
-    // //Eliminacion del ultimo espaciado
-    // .trim();
+    //Eliminacion de espacios en blanco
+    .replace(/\s/g,'')
+    //Espaciado cada 4 numeros
+    .replace(/([0-9]{4})/g,'$1 ')
+    //Eliminacion del ultimo espaciado
+    .trim();
 
     // Agregado de datos a la tarjeta
     numeroTarjeta.textContent = valorInput;
@@ -201,7 +204,7 @@ const inputs2 = document.querySelectorAll('#formulario-tarjeta input');
 formulario.inputNombre.addEventListener('keyup',(e)=>{
     let valorInput = e.target.value;
 
-    formulario.inputNombre.value = valorInput.replace(/[0-9]/g,'');
+    // formulario.inputNombre.value = valorInput.replace(/[0-9]/g,'');
 
     nombreTarjeta.textContent = valorInput;
     firma.textContent = valorInput;

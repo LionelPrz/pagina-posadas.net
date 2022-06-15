@@ -31,9 +31,9 @@ body{
 .formulario-contacto{
     background: #fff;
     width: 100%;
-    max-height: 850px;
-    max-width: 700px;
-    padding: 20px 15px 30px 25px;
+    max-height: 930px;
+    max-width: 930px;
+    padding: 10px 15px 30px 25px;
     border-radius: 10px;
 }
 .formulario-contacto .form-text{
@@ -52,7 +52,7 @@ body{
     display: block;
     color: #7d8994;
     margin-bottom: 5px;
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 16px;
 }
 .formulario-contacto .grupo-input .formulario__input{
@@ -385,8 +385,9 @@ body{
 }
 .formulario-tarjeta input:focus,
 .formulario-tarjeta select:focus{
-    outline: rgb(4,4,4);
-    box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+    border: 3px solid #0075FF;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
 }
 .formulario-tarjeta input{
     margin: 0;
@@ -476,8 +477,8 @@ body{
         width: 130px;
     }
     .grupo-input .formulario__validacion-estado {
-        right: -275px;
-        bottom: 31px;
+        right: -285px;
+        bottom: 32px;
     }
     .formulario-contacto .btn-enviar{
         height: 45px;
@@ -489,7 +490,7 @@ body{
         bottom: 16px;
     }
     .formulario-contacto .grupo-input .formulario__input{
-        width: 300px;
+        width: 310px;
     }
     .formulario-tarjeta .formulario-contacto__mensaje-activo{
         font-size: 12px;
@@ -499,7 +500,7 @@ body{
     }
     .formulario-tarjeta .grupo-input .formulario__validacion-estado {
         right: -310px;
-        bottom: 34px;
+        bottom: 33px;
         font-size: 18px;
 
     }
