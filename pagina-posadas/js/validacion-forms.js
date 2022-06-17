@@ -77,7 +77,6 @@ const inputs2 = document.querySelectorAll('#formulario-tarjeta input');
     }
 }
 
-
     //Generacion de la comprobacion de completado del formulario de contacto
     inputs.forEach((input)=>{
         input.addEventListener('keyup',validarFormulario);
@@ -88,7 +87,6 @@ const inputs2 = document.querySelectorAll('#formulario-tarjeta input');
         input.addEventListener('keyup',validarFormulario);
         // input.addEventListener('blur',validarFormulario);
     })
-
 
     //Generacion de la comprobacion de los campos del formulario de contacto
     formularioContacto.addEventListener('submit', (e)=>{
