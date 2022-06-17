@@ -82,7 +82,7 @@ footer .webside-logo{
 .social-link{
     height: 100%;
     width: 30px;
-    background-image:url(/multimedia/Instagram_icon-icons.com_66804.svg);
+    background-image:url(../multimedia/Instagram_icon-icons.com_66804.svg);
     background-size: 70%;
     background-position: center;
     margin-right: 1rem;
@@ -92,8 +92,8 @@ footer .webside-logo{
     opacity: 0.7;
 }
 footer .social-link:nth-child(2){
-    background-image: url(/multimedia/whatsapp_icon-icons.com_62756.svg);
+    background-image: url(../multimedia/whatsapp_icon-icons.com_62756.svg);
 }
 footer .social-link:nth-child(3){
-    background-image: url(/multimedia/Facebook_icon-icons.com_66805.svg);
+    background-image: url(../multimedia/Facebook_icon-icons.com_66805.svg);
 }
