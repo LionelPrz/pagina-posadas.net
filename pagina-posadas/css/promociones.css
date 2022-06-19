@@ -1,6 +1,7 @@
 /* Listado De Precios  */
 
 .card-container{
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -14,51 +15,79 @@
     margin: auto 0;
     margin-top: 80px;
 }
-.card{
+.delantera{
     background:#fff;
     width: 370px;
     height: 440px;
     margin: 40px;
     border-radius:15px;
-    color:#af34da;
+    transform: rotate(0deg);
+    transform-style: preserve-3d;
+    transition: .3s ease all;
+    z-index: 2;
 }
-.card-title{
-    background: var(--button-main-color);
-    color: var(--main-text-color);
-    width: 320px;
-    margin: 20px auto;
-    border-radius: 15px;
-    text-align: center;
+.active{
+    transform: rotateY(180deg);
 }
-.card-image{
-    height: 300px;
-    margin: 15px;
-    background-size: cover;
-}
-.card:hover{
-    transform: scale(1.2);
-    background: var(--cont-article-main-color);
-    color:var(--main-text-color);
-    transition: .4s;
-    cursor: pointer;
-}
-.card .btn-about{
-    margin: 0 110px;
-}
-.btn-about:hover{
-    transform: scale(1.2);
-    background-color: var(--button-main-color);
-    border: 2px solid var(--cont-container-buttom-color);
-    color:var(--main-text-color);
-    transition: .4s;
-    cursor: pointer;
-}
+
 .card1{
-    background-image: url(../multimedia/imagen1.webp);
+    background-image: url(../multimedia/banner1-pagina.webp);
+    height: 440px;
+    width: 370px;
+    background-size: cover;
+    border-radius: 10px;
 }
 .card2{
-    background-image: url(../multimedia/imagen2.webp);
+    background-image: url(../multimedia/banner2-pagina.webp);
+    height: 440px;
+    width: 370px;
+    background-size: cover;
+    border-radius: 10px;
 }
 .card3{
-    background-image: url(../multimedia/imagen3.webp);
+    background-image: url(../multimedia/banner3-pagina.webp);
+    height: 440px;
+    width: 370px;
+    background-size: cover;
+    border-radius: 10px;
+}
+.trasera{
+    width: 370px;
+    height: 440px;
+    border-radius:10px;
+    background-size: cover;
+    transition: .3s ease all;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.trasera1{
+    background: url(../multimedia/banners1-trasero.webp);
+}
+.trasera2{
+    background: url(../multimedia/banners2-trasero.webp);
+}
+.trasera3{
+    background: url(../multimedia/banners3-trasero.webp);
+}
+.delantera .btn-about{
+    background: var(--button-main-color);
+    border: 2px solid var(--cont-container-buttom-color);
+    color:var(--main-text-color);
+    position: relative;
+    top: 375px;
+    margin: 0 105px;
+    z-index: 3;
+    cursor: pointer;
+}
+.delantera .btn-about-trasero{
+    background: var(--button-main-color);
+    border: 2px solid var(--cont-container-buttom-color);
+    color:var(--main-text-color);
+    position: relative;
+    top: 375px;
+    margin: 0 105px;
+    z-index: 3;
+    cursor: pointer;
 }

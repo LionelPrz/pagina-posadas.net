@@ -4,8 +4,15 @@ const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const footer = document.getElementById('footer');
 const menuLinks = document.querySelectorAll('.nav-menu a[href^=\"#\"]');
-//Funcion para resolver el problema del nav con el footer
+const carta1 = document.getElementById('card1');
+const carta2 = document.getElementById('card2');
+const carta3 = document.getElementById('card3');
+const boton1 = document.getElementById('boton1');
+const boton2 = document.getElementById('boton2');
+const boton3 = document.getElementById('boton3');
 
+
+//Funcion para resolver el problema del nav con el footer
     function agregadoFooter(){
         footer.style.display = "block";
 }
@@ -36,3 +43,38 @@ menuLinks.forEach(menuLink=>{
     })
 })
 
+//Generacion de catalogo de precios animado
+
+        carta1.addEventListener('click',()=>{
+            carta1.classList.toggle('active');
+            if(carta1.classList.contains('active')){
+                boton1.classList.remove('btn-about');
+                boton1.style.display = "none";
+            }
+            else{
+                boton1.classList.add('btn-about');
+                boton1.style.display="block"
+            }
+        });
+        carta2.addEventListener('click',()=>{
+            carta2.classList.toggle('active');
+            if(carta2.classList.contains('active')){
+                boton2.classList.remove('btn-about');
+                boton2.style.display = "none";
+            }
+            else{
+                boton2.classList.add('btn-about');
+                boton2.style.display="block"
+            }
+        });
+        carta3.addEventListener('click',()=>{
+            carta3.classList.toggle('active');
+            if(carta3.classList.contains('active')){
+                boton3.classList.remove('btn-about');
+                boton3.style.display = "none";
+            }
+            else{
+                boton3.classList.add('btn-about');
+                boton3.style.display="block"
+            }
+        });
