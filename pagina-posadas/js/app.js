@@ -50,6 +50,7 @@ menuLinks.forEach(menuLink=>{
             if(carta1.classList.contains('active')){
                 boton1.classList.remove('btn-about');
                 boton1.style.display = "none";
+                boton1.disabled = true;
             }
             else{
                 boton1.classList.add('btn-about');
@@ -61,6 +62,7 @@ menuLinks.forEach(menuLink=>{
             if(carta2.classList.contains('active')){
                 boton2.classList.remove('btn-about');
                 boton2.style.display = "none";
+                boton2.disabled = true;
             }
             else{
                 boton2.classList.add('btn-about');
@@ -72,6 +74,7 @@ menuLinks.forEach(menuLink=>{
             if(carta3.classList.contains('active')){
                 boton3.classList.remove('btn-about');
                 boton3.style.display = "none";
+                boton3.disabled = true;
             }
             else{
                 boton3.classList.add('btn-about');
